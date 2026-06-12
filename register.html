@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tham Gia Hoạt Động - Khoa CNTT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html"><i class="bi bi-cpu-fill"></i> KHOA CNTT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Sự kiện & Khóa học</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="register.html">Đăng ký tham gia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registrations.html">Danh sách đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5" style="max-width: 680px;">
+        <div class="card shadow p-4 bg-white rounded border">
+            <h4 class="text-center fw-bold mb-4 text-primary"><i class="bi bi-clipboard-check-fill"></i> PHIẾU ĐĂNG KÝ THAM GIA</h4>
+            
+            <form id="form-register" novalidate>
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Họ và tên sinh viên <span class="text-danger">*</span></label>
+                    <input type="text" id="input-name" class="form-control" placeholder="Nhập đầy đủ họ và tên...">
+                    <span class="error-message" id="err-name"></span>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label small fw-bold">Địa chỉ Email cá nhân <span class="text-danger">*</span></label>
+                        <input type="email" id="input-email" class="form-control" placeholder="vi-du@gmail.com">
+                        <span class="error-message" id="err-email"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label small fw-bold">Số điện thoại liên lạc <span class="text-danger">*</span></label>
+                        <input type="text" id="input-phone" class="form-control" placeholder="Nhập số điện thoại di động...">
+                        <span class="error-message" id="err-phone"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Lớp hành chính đang sinh hoạt <span class="text-danger">*</span></label>
+                    <input type="text" id="input-class" class="form-control" placeholder="Ví dụ: Đại học Công nghệ thông tin khóa 19">
+                    <span class="error-message" id="err-class"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Chọn sự kiện / khóa học muốn tham dự <span class="text-danger">*</span></label>
+                    <select id="input-course" class="form-select">
+                        <option value="">-- Chọn một chương trình từ danh sách --</option>
+                        <option value="Hội thảo Định hướng Ngành CNTT 2026">Hội thảo Định hướng Ngành CNTT 2026</option>
+                        <option value="Khóa học Lập trình C++ Cơ bản">Khóa học Lập trình C++ Cơ bản</option>
+                        <option value="Workshop Chinh phục Cisco Packet Tracer">Workshop Chinh phục Cisco Packet Tracer</option>
+                        <option value="Cuộc thi Lập trình Thuật toán Robinson">Cuộc thi Lập trình Thuật toán Robinson</option>
+                        <option value="Khóa học Xây dựng Mô hình AI Đơn giản">Khóa học Xây dựng Mô hình AI Đơn giản</option>
+                        <option value="Giao lưu Cựu sinh viên CNTT thành đạt">Giao lưu Cựu sinh viên CNTT thành đạt</option>
+                        <option value="Workshop Thiết kế Web với Bootstrap 5">Workshop Thiết kế Web với Bootstrap 5</option>
+                        <option value="Khóa học JavaScript DOM căn bản">Khóa học JavaScript DOM căn bản</option>
+                    </select>
+                    <span class="error-message" id="err-course"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label small fw-bold">Ghi chú hoặc câu hỏi gửi tới Ban tổ chức</label>
+                    <textarea id="input-note" class="form-control" rows="3" placeholder="Nhập thêm nội dung yêu cầu mong muốn (nếu có)..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm"><i class="bi bi-send-check"></i> XÁC NHẬN GỬI THÔNG TIN ĐĂNG KÝ</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1 fw-bold">BÀI THI GIỮA KỲ - MÔN LẬP TRÌNH WEB FRONTEND</p>
+            <p class="mb-0 small text-secondary">Sinh viên thực hiện: Trần Nguyễn Duy | Lớp: CNTT</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
